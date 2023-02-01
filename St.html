@@ -1,0 +1,41 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style.css">
+  <title>Document</title>
+</head>
+
+<body>
+  <input type="text" id="sok" />
+  <button id="sjekkVare" onclick="vareSok()">Submit</button>
+  <p id="resultat"></p>
+  <script src="./index.js">
+    const prisArr = [
+    { vare: 'pepsi', pris: 30 },
+    { vare: 'fanta', pris: 27 },
+    { vare: 'escada', pris: 108 },
+    { vare: 'dahls', pris: 69 },
+    { vare: 'karsk', pris: 200 },
+];
+function vareSok() {
+    let userInput = document.getElementById('sok').value
+    for (let i = 0; i < prisArr.length; i++) {
+        if (prisArr[i].vare === userInput) {
+            document.getElementById(
+                'resultat'
+            ).innerHTML = `Varen med navn ${userInput} koster ${prisArr[i].pris} kroner!`;
+            console.log(prisArrp[i])
+        }
+    }
+    document.write("Array:",prisArr)
+}
+
+  </script>
+</body>
+
+</html>

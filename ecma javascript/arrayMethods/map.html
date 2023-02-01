@@ -1,0 +1,26 @@
+<!-- //returns a new array containing the result of calling a function on every element in this array -->
+<!-- //returns new array without mutated the original Array. -->
+<!-- ability to chain other object.  -->
+<!-- forEach method returns undefined so that can't chain other objects. -->
+<script>
+    const array = [1, 4, 9, 16, 25, 36];
+    const array1 = array.map((ele, index, arr) => {
+        return (
+            `Index no =${index} and the value is ${ele} belongs to ${arr}`
+        );
+        console.log(array)
+        console.log(array1)
+    });
+
+    //square root of given array
+    let arr = [25, 36, 49, 64, 81, 67]
+    console.log("array:", arr)
+    let arrSqr = arr.map((item, index) => { return Math.sqrt(item); })
+    console.log("arrSqr", arrSqr)
+
+    //Multiply each elemnet by 2 and return only those element which are greater than 10
+
+    let ar = [2, 3, 4, 6, 8];
+    let ar1 = ar.map((item) => { return item * 2 }).filter((item) => { return item > 10 })
+    console.log(ar1)
+</script>

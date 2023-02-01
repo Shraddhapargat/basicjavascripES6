@@ -1,0 +1,48 @@
+//splice delete the element of array
+splice return deleted element
+we can replace the element with splice
+<script>
+    // const myFish = ["angel", "clown", "mandarin", "sturgeon"];
+    // const removed = myFish.splice(2, 0, "drum");
+    // console.log(myFish)
+    // console.log(myFish[4])
+    // console.log(myFish[0])
+    const month = ['jan', 'feb', 'march', 'june', 'july']
+    console.log(month)
+    const indexOfele = month.indexOf('march')
+    console.log(indexOfele)
+    const newmonth = month.splice(5, 0, 'Dec')
+    const replacemonth = month
+    if (replacemonth != -1) {
+        const replacemonth = month.splice(indexOfele, Infinity)
+    } else {
+        console.log('No such data found')
+    }
+    // console.log(month)
+    const finalResult = replacemonth.splice(3,1)
+    console.log(finalResult)
+    console.log("replacemonth",replacemonth)
+
+
+
+    //Remove 0 element before index2, insert 'drum','guitar'
+    const myFish = ["angel", "clown", "mandarin", "sturgeon"];
+    console.log(myFish)
+    myFish.splice(2, 0, 'drum', 'guitar')
+    console.log(myFish)
+
+    // Remove 1 element at index 3
+    myFish.splice(3, 1)
+    console.log(myFish)
+    
+    //Calling splice() on non-array objects
+    const arrayLike = {
+        length: 3,
+        unrelated: "foo",
+        name:'shr',
+        // 0: 5,
+        // 2: 4,
+    };
+    console.log(Array.prototype.splice.call(arrayLike, 0, 1, 2, 3, 4, 5));
+    console.log(arrayLike);
+</script>

@@ -1,0 +1,57 @@
+//find method returns the undefined value and
+find return the first value only
+able to apply more than one value
+findIndex method returns -1
+
+<script>
+    // Array.prototype.indexOf()
+    // returns the first (least) index of an element within the array equal
+    // to an element, or -1 if none is found. it search the elements from the 0th index number
+    let arr = [1, 'shr', 3, 56, 'pargat', 'shra']
+    let str = "hello how are you";
+    // const arrayobject = {
+    //     length: 3,
+    //     0: 2,
+    //     1: 7.3,
+    //     2: 4,
+    // };
+    console.log("array:", arr)
+    // console.log(arr.indexOf(1))
+    // console.log(str.indexOf("o", 3))
+    // console.log("array ", arr.find((cur, index, array) => { arr.array }))
+    // console.log("index ", arr.find((cur, index, array) => { arr.index }))
+    // console.log("current value    ", arr.find((cur, index, array) => { arr.cur }))
+    // console.log("find Index")
+    // console.log("find Index element: ", arr.findIndex((element) => { arr.element }))
+    // console.log("find Index of elelment: ", arr.findIndex((elelment, index) => { return arr.index }))
+    // console.log("find Index of array:  ", arr.findIndex((elelment, index, array) => { return arr.array }))
+    // function isPrime(element) {
+    //     if (element % 2 === 0 || element < 2) {
+    //         return false;
+    //     }
+    //     for (let factor = 3; factor <= Math.sqrt(element); factor += 2) {
+    //         if (element % factor === 0) {
+    //             return false;
+    //         }
+    //     }
+    //     return true;
+    // }
+
+    // console.log([4, 6, 8, 9, 12].findIndex(isPrime)); // -1, not found
+    // console.log([4, 6, 7, 9, 12].findIndex(isPrime));
+    // console.log(  Array.prototype.findIndex.call(arrayobject, (x) => Number.isInteger(x)))
+    //if the given value while searching is not present in array or string the returns -1
+    let result = arr.find(function (item) { return item > 50 })
+    let result1 = arr.findIndex(function (item) { return item > 50 })
+    console.log(result)
+    console.log(result1)
+    // console.log(arr.findIndex(function(item){return (item='shra')}))
+    const inventory = [
+        { name: "apples", quantity: 2 },
+        { name: "bananas", quantity: 0 },
+        { name: "cherries", quantity: 5 },
+    ];
+
+    const result2 = inventory.find(({ quantity }) => quantity === 5);
+    console.log(result2.name);
+</script>

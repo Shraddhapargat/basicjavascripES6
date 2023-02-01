@@ -1,0 +1,30 @@
+<!-- reduce method
+flatten an array means to convert the 3d or 2d array into a  single dimensional array
+the reducer fuction takes four arguments 
+Accumulator
+current value 
+current index  
+current array   -->
+<!-- reduce return a single value the function's accumulator result
+does not execute the function for empty array elements
+method does not change the original array. -->
+
+<script>
+let arr = [4,7,8,5]
+let sum = arr.reduce((accumulator, current, index, arr)=>{
+    // debugger;
+    return accumulator *= current
+})
+console.log(sum)
+
+let ar =[
+    ['zone_1', 'zone_2'],
+    ['zone_3', 'zone_4'],
+    ['zone_5', 'zone_6'],
+    ['zone_7', ['zone_7', 'zone_8']]
+];
+let flatArr = ar.reduce((acc, cur)=>{
+    return acc.concat(cur)
+})
+console.log(flatArr)
+</script>

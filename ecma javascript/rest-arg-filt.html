@@ -1,0 +1,45 @@
+//in rest parameters (...arguments) can filter according requirements
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Script Demo</title>
+    <script>
+        function sum(...args) {
+            return args
+                .filter(function (e) {
+                    return typeof e === 'number';
+                })
+                .reduce(function (prev, curr) {
+                    return prev + curr;
+                });
+        }
+        let result = sum(10, 'Hi', null, undefined, 20);
+        console.log(result);
+        document.write("Addition of filterd elements:-->>", result)
+
+        //Arguments
+        var showNumbers = new Function('...numbers', 'console.log(numbers)');
+        showNumbers(1, 2, 3);
+
+        //
+        let name = 'machine name';
+        let machine = {
+            [name]: 'server',
+            'machine hours': 10000,
+            a:10,
+        };
+
+        console.log(machine[name]); 
+        console.log(machine['machine hours']);
+        console.log(machine.a)
+    </script>
+</head>
+
+<body>
+    <h3>Welcome to html</h3>
+</body>
+
+</html>

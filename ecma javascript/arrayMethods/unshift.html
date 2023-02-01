@@ -1,0 +1,18 @@
+//return new length of the array
+<script>
+    const arr = ["mango", "apple", "kiwi"]
+    console.log("array before:", arr)
+    const array = arr.unshift("banana")
+    console.log("array after using unshift:", arr)
+    console.log("array lenght:", array)
+
+    const newarr = []
+    let x= Number(prompt("Enter the length of array"))
+    for(let i=0;i<x;i++){
+    let n = (prompt("Enter the values for new array"))
+    newarr[i]=(n)
+    console.log("appand array",newarr)
+    const result=newarr.join("")
+    console.log(result)
+}
+</script>

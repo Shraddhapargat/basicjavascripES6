@@ -1,0 +1,22 @@
+calls a function for - each element in the array
+<script>
+    let arr = [1, 2, 3, 4, "array", 'shra']
+    arr.forEach(function (ele, index) { console.log(" " + "index", index + " " + "=> " + ele) })
+    arr.forEach((ele, index, array)=>{console.log(array)})
+
+    let sum = 0;
+    const numbers = [65, 44, 12, 4];
+    numbers.forEach(myFunction);
+    function myFunction(item) {
+        sum += item;
+    }
+    console.log("array: ",numbers)
+    console.log("sum of elements of array", sum)
+
+</script>
+//array prints the entire array till last index
+//element is varialbe that prints the values of array
+can't use break in forEach.
+The forEach() method calls a function for each element in an array.
+It calls a provided callbackFn function once 
+for each element in an array in ascending-index order

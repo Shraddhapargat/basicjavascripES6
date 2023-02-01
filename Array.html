@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Script Demo</title>
+    <script>
+
+        let objectResponse = [
+            {
+                "razorpay_order_id": "response.razorpay_order_id",
+            },
+            {
+                "razorpay_payment_id": "response.razorpay_payment_id",
+            },
+            {
+                "razorpay_signature": "response.razorpay_signature",
+            }
+
+        ]
+
+        let objectResponse1 = [
+            {
+                "name": "shivam",
+            },
+            {
+                "name1": "Rishav"
+            }
+        ]
+        //method 1
+        let [name, name1] = objectResponse1;
+        let objectRes = [...objectResponse, objectResponse1[0]]
+        console.log("Addded objects by destructuring", objectRes)
+        // console.log("All items",objectResponse)
+
+        //method 2
+        objectResponse.push(name)
+        console.log("objects with push method", objectResponse)
+
+        //method 3
+        let len = Object.keys(objectResponse1).length;
+        objectResponse[len+1]=name
+        console.log("with object key", objectResponse)
+
+
+        // let ansOutput = {
+
+        //     "razorpay_order_id": "response.razorpay_order_id",
+
+        //     "razorpay_payment_id": "response.razorpay_payment_id",
+
+        //     "razorpay_signature": "response.razorpay_signature",
+        //     "name": "shivam",
+        // }
+
+        // console.log(ansOutput)
+    </script>
+</head>
+
+<body>
+    <h3>Welcome to shraddha html</h3>
+</body>
+
+</html>

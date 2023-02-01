@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Script Demo</title>
+    <script>
+        let evenSum = 0;
+        let oddSum = 0;
+        let x = Number(prompt("Enter Number"))
+        for (i = 1; i <= x; i++) {
+            if (i % 2 == 0) {
+                evenSum = evenSum + i;
+                document.write(`<h5>${i} is even</h5>`);
+            }
+            else if (i % 2 == 1) {
+                oddSum = oddSum + i;
+                document.write(`<h5>${i} is odd</h5>`);
+                oddSum = oddSum + i;
+            }
+        }
+        document.write(`<h5>Sum of even ${evenSum}</h5>`);
+        document.write(`<h5>Sum of odd ${oddSum}</h5>`);
+    </script>
+</head>
+
+<body>
+    <h3>Welcome to html</h3>
+</body>
+
+</html>

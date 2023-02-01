@@ -1,0 +1,18 @@
+<script>
+function pro() {
+    return new Promise((res, reject) => {
+        setTimeout(() => {
+            let a = "jay";
+            if(a == "jayw"){
+              res("a value is jay")
+            }
+            else{
+                reject("a not equal to jay")
+            }
+        },2000)
+    })
+}
+
+pro().then((res)=>console.log(res))
+.catch((err)=>console.log(err))
+</script>

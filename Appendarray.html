@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Script Demo</title>
+    <script>
+        // let arr = []
+        // for (let i = 0; i < 5; ) {
+        //     let n = prompt("Enter Number to find season")
+        //     arr[i]=n    ;
+        //     i++;
+        // }
+        // document.write("array:",arr)
+        // const userName = Console.WriteLine("Enter your age:")
+        // var name = window.  prompt(<h2>  Enter your name:</h2>)
+        // alert("Your name is"  + name);function myFunction() {
+        let array = []
+        function myFunction() {
+            // let n=5;
+            // for (let i = 0; i < n; ) {
+            //     var x = document.getElementById("myText").value;
+            //     console.log(x)
+            //     array[i] = x;
+            //     document.write("array", array[i])
+            //     console.log(array[i])
+            //     i++;        
+            // }
+            // var x = document.getElementById("myText").value;
+            // array.push(x)
+            // document.write("array", array)
+            var x = document.getElementById("myText").value;
+            let ass = { x }
+            array.push(ass);
+            x.value = "";
+            console.log(array)
+        }
+        console.log(myFunction())
+
+    </script>
+</head>
+
+<body>
+    <h3>Welcome to shraddha html</h3>
+    array:<input type="text" placeholder="elements in array" id="myText" />
+    <button onclick="myFunction()">Submit</button>
+
+
+</body>
+
+</html>

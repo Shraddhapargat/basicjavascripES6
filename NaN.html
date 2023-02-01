@@ -1,0 +1,17 @@
+//NaN is property of the global objec.
+//It is a variable in global scope
+//Inital value of NaN is not a number 
+isNaN is a fuction which represents the value is Number or a string if there is a string it shows 
+its not a number 
+<script>
+    var n = 3;
+    console.log(isNaN(n))//flase  
+    var a = "string"
+    console.log(a)//string is not a number
+    console.log(isNaN(a))// sting is not a number (true)
+
+    console.log(NaN === NaN)// false
+    console.log(Number.NaN===NaN)// false
+    console.log(isNaN(NaN))// true
+
+</script>

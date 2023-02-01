@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Script Demo</title>
+    <script>
+
+        let objectResponse = {
+
+            "razorpay_order_id": "response.razorpay_order_id",
+
+            "razorpay_payment_id": "response.razorpay_payment_id",
+
+            "razorpay_signature": "response.razorpay_signature",
+
+
+        }
+
+        let objectResponse1 = {
+            "name": "shivam",
+            "name1": "Rishav"
+        }
+        let { name, name1 } = objectResponse1;
+        let objectRes = { ...objectResponse, "name":objectResponse1.name }
+
+        console.log(objectRes)
+        // console.log(objectRes)   
+       // console.log(objectResponse)
+
+        // let ansOutput = {
+
+        //     "razorpay_order_id": "response.razorpay_order_id",
+
+        //     "razorpay_payment_id": "response.razorpay_payment_id",
+
+        //     "razorpay_signature": "response.razorpay_signature",
+        //     "name": "shivam",
+        // }
+
+        // console.log(ansOutput)
+
+
+    </script>
+</head>
+
+<body>
+    <h3>Welcome to shraddha html</h3>
+</body>
+
+</html>

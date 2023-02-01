@@ -1,0 +1,99 @@
+<!-- // fill data in empty object  -->
+<script>
+
+    // 
+    let [, , title] = ["Julius", "Caesar", "Consul"   , "of the Roman Republic"];
+    console.log(title);
+    console.log(typeof(title));
+    // console.log(first);
+
+    let arr = [1, '56', 'shra', 7, "pargat"]
+    let [...arr1] = "1, 56, shra, 7, pargat".split(' ');
+    console.log("array:", ...arr)
+
+    // 
+
+    function getItems() {
+        return [10, 20];
+    }
+
+    let items = getItems();
+    let thirdItem = items[1] != undefined ? items[1] : 0;
+
+    console.log(thirdItem);
+    function getScores() {
+        return [70, 80, 90, 100];
+    }
+    let [x, y, ...args] = getScores();
+    console.log(x);
+    console.log(y);
+    console.log(args);
+
+    //
+
+    function getItems() {
+        return 0;
+    }
+    let [a = 10, b = 20] = getItems() || [];
+
+    console.log(a); // 10
+    console.log(b); // 20   
+
+    //
+
+    function getProfile() {
+        return ['John', 'Doe', ['Red', 'Green', 'Blue']];
+    }
+    let [firstName, lastName, [color1, color2, color3]] = getProfile();
+    console.log(color1, color2, color3);
+
+    // 
+    let user = {};
+    [user.name, user.surname] = "John Smith".split(' ');
+
+    // alert(user.name);
+    // alert(user.surname);
+    console.log(user)
+
+    let arry =[];
+    // let ["a", "b", "c"] = arry;
+    // console.log(let [one, two, three] = new Set([1, 2, 3]))
+
+
+    // Looping with .entries()
+    // through destructuring it will return only keys and value not an array
+let obj = {
+  name: "Shraddha",
+  age: 23
+};
+for (let [key, value] of Object.entries(obj)) {
+  console.log(`${key}:${value}`)
+}
+// console.log(Object.entries(obj))
+
+//
+let [name = prompt('name?'), surname = prompt('surname?')] = [];
+console.log(name, surname)
+
+// let {var1, var2} = {var1:…, var2:…}
+let options = {
+  title1: "Menu",
+  width: 100,
+  height: 200
+};
+// without destructuring
+// console.log(options.title); 
+// console.log(options.width);  
+// console.log(options.height); 
+let {title1, width, height} = options;
+console.log(title1); 
+console.log(width); 
+console.log(height);
+
+//OR
+
+let {title1:t, width:w, height:h} = options
+console.log(t)
+console.log(w)
+console.log(h) 
+</script>
