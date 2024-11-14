@@ -1,0 +1,178 @@
+    <!-- <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            body {
+                padding: 0;
+                margin: 0;
+            }
+            * {
+                padding: 0;
+                margin: 0;
+                box-sizing: border-box;
+            }
+            .container {
+                font-family: Arial, sans-serif;
+                /* padding: 20px; */
+            }
+            .headerCont {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-bottom: 20px;
+                margin-top: 5px;
+                /* border: 1px dashed black; */
+                border-bottom: 5px dashed black;
+                border-top: 5px dashed black;
+                padding: 15px 0;
+            }
+
+            
+            .mainHeader {
+                width: 100%;
+                text-align: center;
+                max-width: 760px;
+            }
+            
+            .mainHeader h1 {
+                font-size: 28px;
+                font-weight: bold;
+            }
+            .mainHeader h2 {
+                font-size: 28px;
+                font-weight:bold;
+                margin: 15px 0 0px;
+            }
+
+            .row {
+                display: flex;
+                flex-direction: row;
+                margin: 5px 0;
+                align-items: flex-start;
+                justify-content: center;
+            }
+            .key {
+                width: 50%;
+                text-align: right;
+                color: #000;
+                font-size: 26px;
+                font-weight: 600;
+            }
+
+            .value {
+                width: 50%;
+                margin-left: 5px;
+                color: #000;
+                text-align: left;
+                font-weight: 400;
+                font-size: 35px;
+                word-break: break-all;
+            }
+            .button {
+                display: block;
+                width: 100%;
+                text-align: center;
+                padding: 10px;
+                background-color: #ccc;
+                border: none;
+                color: #000;
+                cursor: pointer;
+                margin-top: 20px;
+            }
+            .qrcode {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                /* margin-right: 10px; */
+            }
+            .qrcode img{
+                width: 200px;
+                height: auto;
+                
+            }
+        </style>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcode-generator/1.4.4/qrcode.min.js"></script>
+    </head>
+    <body>
+        <div class="container" style="width: 100%; max-width: 100%; margin: 0 auto;">
+            <div class="" style=" display: flex;
+            flex-direction: column;
+            width: 100%;
+            text-align: center;
+            justify-content: center; "> 
+
+<div class="headerCont">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREtMIslqH7yIi8IEOk3Fd97AaDfLyGGFgpvJZpwmTr26rnq_CoolNKXYlskOEujKIc7ic&usqp=CAU"
+                 alt="Logo" width="100" height="100" style="object-fit: contain;">
+                 <div class="mainHeader">
+                    <h1> NATIONAL AGRICULTURE MARKET MERTA CITY</h1>
+                    <h2 class="">GATE ENTRY RECEIPT</h2>
+                
+                </div>
+                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREtMIslqH7yIi8IEOk3Fd97AaDfLyGGFgpvJZpwmTr26rnq_CoolNKXYlskOEujKIc7ic&usqp=CAU"
+                 alt="Logo" width="100" height="100" style="object-fit: contain;">
+                </div>
+                <div id="content"> 
+                    <!-- Dynamic content will be inserted here -->
+                </div>
+                <div class="qrcode" id="qrcode"></div>
+                <!-- <button class="button" onclick="createPDF()">Create PDF</button> -->
+            </div>
+        </div>
+            
+            <script>
+                const arr = [
+                    { id: 1, key: "LOT Code", value: "170-20230628-7", bold: true },
+                    { id: 2, key: "Gate Entry Pass No", value: "202306070129003238" },
+                    { id: 3, key: "purpose", value: "Aucation/E-Tender" },
+                    { id: 4, key: "Date", value: "28/06/2023 10.31.52" },
+                    { id: 5, key: "Farmer", value: "Vishnu Ram" },
+            { id: 6, key: "Mobile No", value: " " },
+            { id: 7, key: "Village", value: "Harsolav" },
+            { id: 8, key: "Commision Agent", value: "Deelip Kumar Pradeep Kumar" },
+            { id: 9, key: "Company", value: "Mr. Deelip Kumar Pradeep Kumar" },
+            { id: 10, key: "Commodity", value: "Mustard" },
+            { id: 11, key: "Bags", value: "25.00" },
+            { id: 12, key: "Bag Type", value: "50KG BAG" },
+            { id: 13, key: "Appx. Quality", value: "12.50 Qui" },
+            { id: 14, key: "Vehicle No", value: "T" },
+            { id: 15, key: "Market/SubMarket", value: "----" },
+            { id: 16, key: "Lot Type", value: "Primary sale" },
+            { id: 17, key: "Govt Id", value: "*******" }
+        ];
+        
+        const content = document.getElementById('content');
+        arr.forEach(item => {
+            const row = document.createElement('div');
+            row.className = 'row';
+            
+            const key = document.createElement('div');
+            key.className = 'key';
+            key.textContent = item.key + ' :';
+            row.appendChild(key);
+            
+            const value = document.createElement('div');
+            value.className = 'value';
+            value.style.fontSize = item.bold ? '36px' : '25px';
+            value.style.fontWeight = item.bold ? '900' : '400';
+            value.textContent = item.value;
+            row.appendChild(value);
+            
+            content.appendChild(row);
+        });
+        
+        const qrCodeDiv = document.getElementById('qrcode');
+        const qrCode = qrcode(0, 'L');
+        qrCode.addData('https://externlabs.com/');
+        qrCode.make();
+        qrCodeDiv.innerHTML = qrCode.createImgTag(4);
+        
+        function createPDF() {
+            alert('PDF generation logic goes here.');
+        }
+        </script>
+    </body>
+    </html> -->

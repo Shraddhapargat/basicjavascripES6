@@ -1,0 +1,257 @@
+<html>
+  <head>
+    <style>
+      body {
+        font-family: 'Helvetica';
+        font-size: 12px;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        height: 100%;
+      }
+       
+      * {
+          padding: 0;
+          margin: 0;
+          box-sizing: border-box;
+      }
+
+      header, footer {
+        height: 50px;
+        background-color: #fff;
+        color: #000;
+        display: flex;
+        justify-content: center;
+        padding: 0 20px;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 5px 10px 50px 10px;
+        border: 1px solid black;
+      }
+
+      td {
+        padding: 5px;
+      }
+
+      th {
+        background-color: #ccc;
+      }
+    
+    .container {
+        font-family: Arial, sans-serif;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .headerCont {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 20px;
+        margin-top: 55px;
+        border-bottom: 5px dashed black;
+        border-top: 5px dashed black;
+        padding: 10px 0;
+    }
+
+    .mainHeader {
+        text-align: center;
+    }
+
+    .mainHeader h1 {
+        font-size: 14px;
+        font-weight: bold;
+    }
+
+    .mainHeader h2 {
+        font-size: 14px;
+        font-weight: bold;
+        margin: 15px 0 0;
+    }
+    .row {
+        display: flex;
+        flex-direction: row;
+        margin-top: 5px ;
+        align-items: flex-start;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    
+    .row + .row {
+        margin-top: 10px;
+    }
+
+    .key {
+      
+        text-align: right;
+        color: #000;
+  
+        font-weight: 600;
+        
+    }
+
+    .value {
+        width: 50%;
+        margin-left: 5px;
+        color: #000;
+        text-align: left;
+        font-weight: 400;
+        font-size: 35px;
+        word-break: break-all;
+        letter-spacing: 0.5px;
+    }
+
+    .qrcode {
+      margin-top: 25px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .qrcode img {
+        width: 150px;
+        height: auto;
+    }
+    .hidetext { -webkit-text-security: disc; /* Default */ }
+    @media print {
+        body,html {
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        height: 100%;
+    }
+    .container {
+        font-family: Arial, sans-serif;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+        .headerCont, .row, .qrcode {
+            page-break-inside: avoid;
+            page-break-after: auto;
+            page-break-before: auto;
+        }
+    }
+    </style>
+  </head>
+  <body>
+     <div class="container">
+        <div>
+            <div class="headerCont">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREtMIslqH7yIi8IEOk3Fd97AaDfLyGGFgpvJZpwmTr26rnq_CoolNKXYlskOEujKIc7ic&usqp=CAU"
+                     alt="Logo" width="50" height="50" >
+                <div class="mainHeader">
+                    <h1>NATIONAL AGRICULTURE MARKET</h1>
+                    <h1>MERTA CITY</h1>
+                    <h2>GATE ENTRY RECEIPT</h2>
+                </div>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREtMIslqH7yIi8IEOk3Fd97AaDfLyGGFgpvJZpwmTr26rnq_CoolNKXYlskOEujKIc7ic&usqp=CAU"
+                     alt="Logo" width="50" height="50" >
+            </div>
+            </div>
+    </div>
+
+    <table>
+    
+    <tr>
+    <td class="key">Purpose</td>
+    <td> : </td>
+    <td class=false></td>
+    </tr>
+    
+    <tr>
+    <td class="key">Date</td>
+    <td> : </td>
+    <td class=false>07/06/2024 10:50</td>
+    </tr>
+    
+    <tr>
+    <td class="key">Farmer</td>
+    <td> : </td>
+    <td class=false></td>
+    </tr>
+    
+    <tr>
+    <td class="key">Mobile No</td>
+    <td> : </td>
+    <td class=false></td>
+    </tr>
+    
+    <tr>
+    <td class="key">Village</td>
+    <td> : </td>
+    <td class=false></td>
+    </tr>
+    
+    <tr>
+    <td class="key">Commision Agent huiol</td>
+    <td> : </td>
+    <td class=false></td>
+    </tr>
+    
+    <tr>
+    <td class="key">Company</td>
+    <td> : </td>
+    <td class=false></td>
+    </tr>
+    
+    <tr>
+    <td class="key">Commodity</td>
+    <td> : </td>
+    <td class=false></td>
+    </tr>
+    
+    <tr>
+    <td class="key">Bags</td>
+    <td> : </td>
+    <td class=false></td>
+    </tr>
+    
+    <tr>
+    <td class="key">Bag Type</td>
+    <td> : </td>
+    <td class=false></td>
+    </tr>
+    
+    <tr>
+    <td class="key">Appx. Quantity</td>
+    <td> : </td>
+    <td class=false></td>
+    </tr>
+    
+    <tr>
+    <td class="key">Vehicle No</td>
+    <td> : </td>
+    <td class=false></td>
+    </tr>
+    
+    <tr>
+    <td class="key">Market/SubMarket</td>
+    <td> : </td>
+    <td class=false></td>
+    </tr>
+    
+    <tr>
+    <td class="key">Lot Type</td>
+    <td> : </td>
+    <td class=false></td>
+    </tr>
+    
+    <tr>
+    <td class="key">Govt Id</td>
+    <td> : </td>
+    <td class=hidetext></td>
+    </tr>
+    
+    </table>
+    <div class="qrcode" id="qrcode">
+     <img src="	data:image/gif;base64,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" alt="Logo" width="100" height="100" style="object-fit: contain;">
+    </div>
+   
+  </body>
+</html>
